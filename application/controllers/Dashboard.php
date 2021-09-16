@@ -14,7 +14,7 @@ class Dashboard extends AUTH_Controller {
     $arr1 = array();
 
     foreach($data['total_masuk_bulan'] as $tm){
-      if(date('m', strtotime($tm['tanggal'])) == date('m')){
+      if(date('m Y', strtotime($tm['tanggal'])) == date('m Y')){
         array_push($arr1, $tm['jumlah']);
       } 
     }
@@ -22,7 +22,7 @@ class Dashboard extends AUTH_Controller {
     $arr2 = array();
 
     foreach($data['total_keluar_bulan'] as $tm){
-      if(date('m', strtotime($tm['tanggal'])) == date('m')){
+      if(date('m Y', strtotime($tm['tanggal'])) == date('m Y')){
         array_push($arr2, $tm['jumlah']);
       } 
     }
